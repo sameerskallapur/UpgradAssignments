@@ -1,0 +1,7 @@
+package com.ecommerce.serviceImpl;
+
+import com.ecommerce.services.ProductServices;
+
+public class ProductServiceImpl implements ProductServices {
+
+}

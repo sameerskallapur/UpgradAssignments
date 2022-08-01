@@ -1,0 +1,44 @@
+package com.ecommerce.serviceImpl;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.ecommerce.entities.ProductEntity;
+import com.ecommerce.pojos.Product;
+import com.ecommerce.repositories.ProductRepository;
+import com.ecommerce.services.ProductServices;
+
+@Component
+public class ProductServiceImpl implements ProductServices {
+	
+	@Autowired
+	private ProductRepository productRepository;
+
+	@Override
+	public void addProduct(Product product) {
+//		ProductEntity prodEntity = new ProductEntity();
+		ProductEntity prodEntity = null;
+//				productRepository.findByProdnameAndModel(product.getProdName(), product.getModel());
+		if (prodEntity!=null) {
+			int newQuantity = prodEntity.getQuantity()+product.getQuantity();
+			prodEntity.setQuantity(newQuantity);
+			prodEntity.setMadeBy(product.getMadeBy());
+			prodEntity.setPrice(product.getPrice());
+			productRepository.save(prodEntity);
+		} else {
+			BeanUtils.copyProperties(product, prodEntity);
+			productRepository.save(prodEntity);
+			
+		}
+		
+	}
+
+	@Override
+	public ProductEntity viewProduct(String productName , String model) {
+		ProductEntity prodEntity = null;
+//				productRepository.findByProdnameAndModel(productName, model);
+		return prodEntity;
+	}
+
+}

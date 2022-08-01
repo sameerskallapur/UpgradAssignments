@@ -1,0 +1,15 @@
+package com.ecommerce.services;
+
+import org.springframework.stereotype.Service;
+
+import com.ecommerce.entities.ProductEntity;
+import com.ecommerce.pojos.Product;
+
+@Service
+public interface ProductServices {
+
+	public void addProduct(Product product);
+
+	public ProductEntity viewProduct(String productName, String model);
+
+}

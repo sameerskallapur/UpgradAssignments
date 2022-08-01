@@ -1,0 +1,15 @@
+package com.ecommerce.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.ecommerce.entities.ProductEntity;
+
+@Repository
+public interface ProductRepository extends JpaRepository<ProductEntity,Integer> {
+
+	@Query("select p from products p where p.product_name = ?1 and p.model = ?2 ")
+	ProductEntity findProductNameAndModel( String productName, String model);
+	
+}

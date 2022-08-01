@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: GATEWAY-SERVICE
+
+  cloud:
+    gateway:
+      routes:
+        - id: componentprocessing-service
+          uri: lb://COMPONENTPROCESSING-SERVICE
+          predicates:
+            - Path=/componentprocessing/**
+        - id: packaginganddelivery-service
+          uri: lb://PACKAGINGANDDELIVERY-SERVICE
+          predicates:
+            - Path=/packaginganddelivery/**
+    
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    hostname: localhost
+    
+    
+server:
+  port: 8989

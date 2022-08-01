@@ -1,0 +1,27 @@
+package com.ecommerce.serviceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ecommerce.entities.ProductEntity;
+import com.ecommerce.pojos.Product;
+import com.ecommerce.repositories.ProductRepository;
+import com.ecommerce.services.ProductServices;
+
+public class ProductServiceImpl implements ProductServices {
+	
+	@Autowired
+	private ProductRepository productRepository;
+
+	@Override
+	public void addProduct(Product product) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ProductEntity viewProduct(String product) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

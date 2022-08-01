@@ -1,0 +1,35 @@
+package com.ecommerce.controller;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ecommerce.entities.ProductEntity;
+import com.ecommerce.pojos.Product;
+
+@RestController
+public class ECommerceController {
+	
+	 @PostConstruct
+	    private void postConstruct() {
+			 ProductEntity product = new ProductEntity();
+			 product.setProdName("phone");
+			 product.setModel("samsung");
+			 product.setMadeBy("SamsungCreator");
+			 product.setPrice(40000);
+			 product.setQuantity(10);
+			 
+	    }
+	
+	@PostMapping("/addProduct")
+	public ResponseEntity<String> addStore(@RequestBody Product product) {
+		StoreEntity store = storeService.addStore(product);
+		return ResponseEntity.status(HttpStatus.CREATED).body("Adding success");
+		
+	}
+
+}

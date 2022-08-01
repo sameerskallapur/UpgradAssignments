@@ -1,0 +1,64 @@
+package com.ecommerce.runner;
+
+import org.springframework.beans.BeansException;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
+
+import com.ecommerce.entities.ProductEntity;
+
+@Component
+public class InitializationCommandLineRunner implements CommandLineRunner, ApplicationContextAware {
+	ApplicationContext applicationContext;
+
+	@Override
+	public void run(String... args) throws Exception {
+		 ProductEntity product = new ProductEntity();
+		 product.setProdName("phone");
+		 product.setModel("samsung");
+		 product.setMadeBy("SamsungCreator");
+		 product.setPrice(40000);
+		 product.setQuantity(10);
+		 productRepository.save(product);
+		 
+		 ProductEntity product2 = new ProductEntity();
+		 product.setProdName("laptop");
+		 product.setModel("toshiba");
+		 product.setMadeBy("ToshibaCreator");
+		 product.setPrice(80000);
+		 product.setQuantity(10);
+		 productRepository.save(product2);
+		 
+		 ProductEntity product3 = new ProductEntity();
+		 product.setProdName("pen");
+		 product.setModel("renolds");
+		 product.setMadeBy("RenoldsCreator");
+		 product.setPrice(50);
+		 product.setQuantity(10);
+		 productRepository.save(product3);
+		 
+		 ProductEntity product4 = new ProductEntity();
+		 product.setProdName("Book");
+		 product.setModel("Harrypotter");
+		 product.setMadeBy("HarrypotterCreator");
+		 product.setPrice(400);
+		 product.setQuantity(10);
+		 productRepository.save(product4);
+		 
+		 ProductEntity product5 = new ProductEntity();
+		 product.setProdName("Tv");
+		 product.setModel("Nokia");
+		 product.setMadeBy("NokiaCreator");
+		 product.setPrice(50000);
+		 product.setQuantity(10);
+		 productRepository.save(product5);
+		 
+   }
+
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		this.applicationContext = applicationContext;
+	}
+
+}

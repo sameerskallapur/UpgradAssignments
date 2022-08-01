@@ -1,0 +1,10 @@
+package com.ecommerce.services;
+
+import com.ecommerce.entities.ProductEntity;
+import com.ecommerce.pojos.Product;
+
+public interface ProductServices {
+
+	public void addProduct(Product product);
+
+}

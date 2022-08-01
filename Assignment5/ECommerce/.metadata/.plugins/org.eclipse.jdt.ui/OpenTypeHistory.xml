@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=ECommerce/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ecommerce.services{ProductServices.java[ProductServices" modifiers="513" timestamp="1654253050415"/>
+    <typeInfo handle="=ECommerce/C:\/Users\/SameerKallapur\/.m2\/repository\/org\/springframework\/data\/spring-data-commons\/2.7.0\/spring-data-commons-2.7.0.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-commons=/=/maven.version=/2.7.0=/=/maven.scope=/compile=/&lt;org.springframework.data.repository(CrudRepository.class[CrudRepository" modifiers="1537" timestamp="1653031289791"/>
+    <typeInfo handle="=ECommerce/C:\/Users\/SameerKallapur\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.7.0\/spring-data-jpa-2.7.0.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.7.0=/=/maven.scope=/compile=/&lt;org.springframework.data.jpa.repository.support(CrudMethodMetadata.class[CrudMethodMetadata" modifiers="1537" timestamp="1653031293374"/>
+</typeInfoHistroy>
